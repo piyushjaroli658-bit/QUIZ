@@ -1,0 +1,112 @@
+:root {
+    --navy: #0b1f3a;
+    --navy-mid: #16365d;
+    --blue: #1e4d8c;
+    --blue-light: #2a63b0;
+    --gold: #c9a227;
+    --gold-bright: #e0bc4a;
+    --gold-soft: #f4e6b5;
+    --white: #ffffff;
+    --ivory: #f7f4ec;
+    --text: #10243f;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    min-height: 100%;
+}
+
+body {
+    font-family: "Segoe UI", Georgia, "Times New Roman", serif;
+    color: var(--text);
+    background:
+        radial-gradient(circle at top right, rgba(201, 162, 39, 0.18), transparent 42%),
+        linear-gradient(165deg, var(--navy) 0%, var(--navy-mid) 48%, #0e2748 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 48px 20px 72px;
+}
+
+h1 {
+    margin: 0 0 32px;
+    color: var(--white);
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    font-size: 2rem;
+    text-align: center;
+    border-bottom: 2px solid var(--gold);
+    padding-bottom: 12px;
+}
+
+#quiz {
+    width: min(640px, 100%);
+    background: var(--white);
+    border: 1px solid var(--gold);
+    border-radius: 14px;
+    padding: 32px 28px 28px;
+    box-shadow:
+        0 0 0 6px rgba(201, 162, 39, 0.08),
+        0 18px 40px rgba(11, 31, 58, 0.35);
+}
+
+#question {
+    margin: 0 0 22px;
+    color: var(--navy);
+    font-size: 1.25rem;
+    line-height: 1.45;
+    font-weight: 600;
+}
+
+#options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#options button {
+    appearance: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    font: inherit;
+    font-size: 1rem;
+    color: var(--navy);
+    background: var(--ivory);
+    border: 1px solid #d9c98a;
+    border-radius: 10px;
+    padding: 14px 16px;
+    transition: background 0.18s ease, border-color 0.18s ease, color 0.18s ease, transform 0.12s ease;
+}
+
+#options button:hover,
+#options button:focus-visible {
+    background: var(--blue);
+    border-color: var(--gold);
+    color: var(--white);
+    outline: none;
+    transform: translateY(-1px);
+}
+
+#options button:active {
+    background: var(--navy);
+    border-color: var(--gold-bright);
+}
+
+#result {
+    width: min(640px, 100%);
+    margin: 24px 0 0;
+    min-height: 1.5em;
+    text-align: center;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--gold-soft);
+    letter-spacing: 0.02em;
+}
